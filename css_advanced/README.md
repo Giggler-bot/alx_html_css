@@ -37,4 +37,4 @@ To view the project locally:
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/<your-username>/alx_html_css.git
+git clone https://github.com/Giggler-bot/alx_html_css.git
