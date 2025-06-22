@@ -90,10 +90,12 @@ body {
   cursor: pointer;
   margin-bottom: 30px;
   transition: background 0.3s ease;
+  transform: scale(0.8);
 }
 
 .btn:hover {
-  background-color: #e02f2f;
+    background-color: #e02f2f;
+    animation: bounce 0.5s ease; 
 }
 
 .hero-description {
@@ -166,6 +168,7 @@ body {
   padding: 30px 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  transform: scale(0.8); 
 }
 
 .feature-item:hover {
@@ -216,8 +219,31 @@ body {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically (for wrapper) */
     margin: 30px;
+     transform: scale(0.8);
 }
 
+.result-item:hover .pentagon-wrapper {
+  animation: bounce 0.5s ease;
+}
+
+.pentagon-wrapper {
+    position: relative;
+    width: 100%; /* Make wrapper fill item width */
+    height: 100%; /* Make wrapper fill item height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pentagon-wrapper img {
+    position: absolute; /* Position the image as the background shape */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image fits without distortion */
+    z-index: 1;
+}
 
 .pentagon-content {
     position: relative; /* Position relative to the wrapper, on top of image */
@@ -231,34 +257,6 @@ body {
     /* Adjust padding to fit within the pentagon shape visually */
     padding-top: 20px; /* More padding top for the specific pentagon shape */
     padding-bottom: 20px;
-}
-
-
-/* Pentagon Shape Using clip-path */
-.pentagon {
-  width: 120px;
-  height: 120px;
-  background-color: #ff4343;
-  clip-path: polygon(
-    50% 0%,
-    100% 38%,
-    82% 100%,
-    18% 100%,
-    0% 38%
-  );
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  transition: transform 0.3s ease;
-  padding: 10px;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.pentagon:hover {
-  transform: translateY(-5px);
 }
 
 .result-number {
@@ -437,3 +435,39 @@ body {
         max-width: 800px;
     }
 }
+
+
+/* === Animation Keyframes === */
+
+/* Pop In (scale & fade) */
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Bounce Hover Effect */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* === Animate Items on Load === */
+.features-grid .feature-item:nth-child(1) { animation-delay: 0.1s; }
+.features-grid .feature-item:nth-child(2) { animation-delay: 0.2s; }
+.features-grid .feature-item:nth-child(3) { animation-delay: 0.3s; }
+.features-grid .feature-item:nth-child(4) { animation-delay: 0.4s; }
+
+.results-grid .result-item:nth-child(1) { animation-delay: 0.1s; }
+.results-grid .result-item:nth-child(2) { animation-delay: 0.2s; }
+.results-grid .result-item:nth-child(3) { animation-delay: 0.3s; }
+.results-grid .result-item:nth-child(4) { animation-delay: 0.4s; }

@@ -7,22 +7,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="6-styles.css"/>
+  <link rel="stylesheet" href="8-styles.css"/>
 </head>
 <body>
     <section class="hero-section">
-        <header class="nav-wrapper">
-            <nav class="nav-bar">
-                <img src="images/logo_headphones.png" alt="Headphones logo" class="logo" />
-                <ul class="nav-list">
-                    <li><a href="#what-we-do" class="nav-link">What we do</a></li>
-                    <li><a href="#our-results" class="nav-link">Our results</a></li>
-                    <li><a href="#contact-us" class="nav-link">Contact us</a></li>
-                </ul>
-            </nav>
-        </header>
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <a href="#" class="navbar-logo">
+                        <img src="images/logo_headphones.png" alt="logo" class="logo" width="170">
+                    </a>
 
-        <div class="hero-content">
+                    <div class="hamburger" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                    <ul class="navbar-menu">
+                        <li class="navbar-item">
+                            <a href="#what-we-do" class="nav-link">What we do</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#our-results" class="nav-link">Our results</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#contact-us" class="nav-link">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>    
+        <div class="hero-content"> 
             <h1 class="hero-title">Lorem ipsum dolor sit amet lorem ipsum</h1>
             <p class="hero-subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
             <button class="btn">Call to Action</button>
@@ -73,32 +89,43 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
-
             <div class="results-grid">
                 <div class="result-item">
-                <div class="pentagon">
-                    <span class="result-number">+2%</span>
-                    <p class="result-label">Lorem ipsum dolor</p>
-                </div>
-                </div>
-                <div class="result-item">
-                <div class="pentagon">
-                    <span class="result-number">+2%</span>
-                    <p class="result-label">Lorem ipsum dolor</p>
-                </div>
+                    <div class="pentagon-wrapper">
+                        <img src="images/pentagone.png" alt="result icon">
+                        <div class="pentagon-content">
+                        <span class="result-number">+2%</span>
+                        <p class="result-label">Lorem ipsum dolor</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="result-item">
-                <div class="pentagon">
-                    <span class="result-number">+2%</span>
-                    <p class="result-label">Lorem ipsum dolor</p>
-                </div>
+                    <div class="pentagon-wrapper">
+                        <img src="images/pentagone.png" alt="result icon">
+                        <div class="pentagon-content">
+                        <span class="result-number">+2%</span>
+                        <p class="result-label">Lorem ipsum dolor</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="result-item">
-                <div class="pentagon">
-                    <span class="result-number">+2%</span>
-                    <p class="result-label">Lorem ipsum dolor</p>
+                    <div class="pentagon-wrapper">
+                        <img src="images/pentagone.png" alt="result icon">
+                        <div class="pentagon-content">
+                        <span class="result-number">+2%</span>
+                        <p class="result-label">Lorem ipsum dolor</p>
+                        </div>
+                    </div>
                 </div>
-                </div>
+                <div class="result-item">
+                    <div class="pentagon-wrapper">
+                        <img src="images/pentagone.png" alt="result icon">
+                        <div class="pentagon-content">
+                        <span class="result-number">+2%</span>
+                        <p class="result-label">Lorem ipsum dolor</p>
+                        </div>
+                    </div>
+                </div>               
             </div>
         </section>
 
@@ -133,5 +160,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="8-script.js"></script>
 </body>
 </html>
